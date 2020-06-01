@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 
 class DetailsTableVC: UITableViewController {
     
@@ -25,6 +26,8 @@ class DetailsTableVC: UITableViewController {
     @IBOutlet weak var taskTV: UITextView!
     @IBOutlet weak var dataPickerTF: UITextField!
     @IBOutlet weak var cancelBtn: UIButton!
+    
+    let center = UNUserNotificationCenter.current()
     
     var classes = ["", "Do First", "Schedule", "Delegate", "Delete"]
     
@@ -53,6 +56,30 @@ class DetailsTableVC: UITableViewController {
         
         nameTaskTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
+
+//MARK: - UserNotification
+    
+    func configureNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Task Reminder"
+        content.body = "Check the Task List"
+        content.badge = 1
+        content.sound = UNNotificationSound.default
+        
+        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: datePicker.date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+        
+        let identifier = "Local identifier"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        center.delegate = self
+        
+        center.add(request) { (error) in
+            if let error = error {
+                print(error)
+            }
+          }
+      }
     
 //MARK: - configure saveBtn
     
@@ -264,3 +291,17 @@ extension DetailsTableVC: UITextFieldDelegate {
         return true
     }
 }
+
+//MARK:- extension_UserNotificationCenter
+
+extension DetailsTableVC: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .alert])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
+}
+
