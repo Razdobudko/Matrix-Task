@@ -377,7 +377,6 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmY-fG-pfe">
                                                     <rect key="frame" x="239.33333333333334" y="15" width="15" height="15"/>
-                                                    <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="Knx-tQ-ErN"/>
                                                         <constraint firstAttribute="height" constant="15" id="pWw-h5-nLP"/>

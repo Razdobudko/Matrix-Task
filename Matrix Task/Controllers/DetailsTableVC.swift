@@ -131,7 +131,7 @@ class DetailsTableVC: UITableViewController {
     private func configureTask() {
         
         if label.text == "Select section" {
-            let alert = UIAlertController(title: "Select section", message: "Select section", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Select section", message: nil, preferredStyle: .alert)
             let alertOk = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(alertOk)
             present(alert, animated: true, completion: nil)
