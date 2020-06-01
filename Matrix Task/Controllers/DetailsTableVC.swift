@@ -130,6 +130,13 @@ class DetailsTableVC: UITableViewController {
     
     private func configureTask() {
         
+        if label.text == "Select section" {
+            let alert = UIAlertController(title: "Select section", message: nil, preferredStyle: .alert)
+            let alertOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(alertOk)
+            present(alert, animated: true, completion: nil)
+        }
+        
         if label.text == "Do First" {
             guard nameTaskTF.text != nil && nameTaskTF.text != "" else {return}
             let newTask = TaskDoFirst()
