@@ -69,6 +69,9 @@ class DetailsTableVC: UITableViewController {
     
     @IBAction func clickSaveBtn(_ sender: Any) {
         configureTask()
+        
+        UserNotificationManager.shared.localNotification(title: "Task Reminder", body: "Check the Task List", date: datePicker.date)
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -87,8 +90,6 @@ class DetailsTableVC: UITableViewController {
         dataPickerTF.inputAccessoryView = toolBar
         dataPickerTF.inputView = datePicker
         datePicker.datePickerMode = .dateAndTime
-        
-        UserNotificationManager.shared.localNotification(title: "Task Reminder", body: "Check the Task List", date: datePicker.date)
     }
     
     @objc private func clickDoneButton () {
