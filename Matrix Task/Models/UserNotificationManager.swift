@@ -50,7 +50,6 @@ class UserNotificationManager: NSObject {
 //MARK:- extension_UserNotificationCenter
 
 extension UserNotificationManager: UNUserNotificationCenterDelegate {
-
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.sound, .alert, .badge])
     }

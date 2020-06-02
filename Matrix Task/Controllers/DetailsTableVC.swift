@@ -267,8 +267,7 @@ extension DetailsTableVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
 //MARK:- extension_PickerView
 
-extension DetailsTableVC: UITextFieldDelegate {
-    
+extension DetailsTableVC: UITextFieldDelegate {    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTaskTF.becomeFirstResponder()
         nameTaskTF.resignFirstResponder()
