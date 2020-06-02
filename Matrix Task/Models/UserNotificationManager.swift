@@ -23,6 +23,7 @@ class UserNotificationManager: NSObject {
                 print("NO")
             }
         }
+        center.delegate = self
     }
     
     func localNotification(title: String, body: String, date: Date) {
@@ -43,7 +44,6 @@ class UserNotificationManager: NSObject {
                 print(error)
             }
         }
-        center.delegate = self
     }
 }
 
