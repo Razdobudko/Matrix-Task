@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FD4CB444C88BEAB48DC589C /* libPods-Matrix Task.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7874A69E86548B0DD0E2D3 /* libPods-Matrix Task.a */; };
+		D63D5C8A248693EF004F0681 /* UserNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63D5C89248693EF004F0681 /* UserNotificationManager.swift */; };
 		D6CEEE35248596E2004A3282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEEE34248596E2004A3282 /* AppDelegate.swift */; };
 		D6CEEE37248596E2004A3282 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEEE36248596E2004A3282 /* SceneDelegate.swift */; };
 		D6CEEE39248596E2004A3282 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CEEE38248596E2004A3282 /* MainVC.swift */; };
@@ -27,6 +28,7 @@
 		3D7874A69E86548B0DD0E2D3 /* libPods-Matrix Task.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Matrix Task.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6102E243D6DAB2F7D94FC9 /* Pods-Matrix Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matrix Task.debug.xcconfig"; path = "Target Support Files/Pods-Matrix Task/Pods-Matrix Task.debug.xcconfig"; sourceTree = "<group>"; };
 		A2AA3418A879F0D5382B4D0D /* Pods-Matrix Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matrix Task.release.xcconfig"; path = "Target Support Files/Pods-Matrix Task/Pods-Matrix Task.release.xcconfig"; sourceTree = "<group>"; };
+		D63D5C89248693EF004F0681 /* UserNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationManager.swift; sourceTree = "<group>"; };
 		D6CEEE31248596E2004A3282 /* Matrix Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matrix Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CEEE34248596E2004A3282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6CEEE36248596E2004A3282 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				D6CEEE4B248597E3004A3282 /* Task.swift */,
 				D6CEEE4D24859839004A3282 /* Realm.swift */,
+				D63D5C89248693EF004F0681 /* UserNotificationManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				D6CEEE5824859A42004A3282 /* DeleteVC.swift in Sources */,
 				D6CEEE502485985D004A3282 /* DoFirstVC.swift in Sources */,
 				D6CEEE5224859884004A3282 /* DetailsTableVC.swift in Sources */,
+				D63D5C8A248693EF004F0681 /* UserNotificationManager.swift in Sources */,
 				D6CEEE5624859A2D004A3282 /* DelegateVC.swift in Sources */,
 				D6CEEE37248596E2004A3282 /* SceneDelegate.swift in Sources */,
 			);

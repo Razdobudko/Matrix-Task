@@ -15,17 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let center = UNUserNotificationCenter.current()
-        
-        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-            if granted {
-                print("OK")
-            } else {
-                print("NO")
-            }
-        }
         // Override point for customization after application launch.
+        UserNotificationManager.shared.configureNotification()
         return true
     }
 
