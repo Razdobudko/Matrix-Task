@@ -72,7 +72,14 @@ class DetailsTableVC: UITableViewController {
         
         UserNotificationManager.shared.localNotification(title: "Task Reminder", body: "Check the Task List", date: datePicker.date)
         
-        dismiss(animated: true, completion: nil)
+        if label.text == "Select section" {
+                   let alert = UIAlertController(title: "Select section", message: nil, preferredStyle: .alert)
+                   let alertOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+                   alert.addAction(alertOk)
+                   present(alert, animated: true, completion: nil)
+        } else {
+             dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func clickCancelBtn(_ sender: Any) {
@@ -106,13 +113,6 @@ class DetailsTableVC: UITableViewController {
 //MARK: - NEW_TASK
     
     private func configureTask() {
-        
-        if label.text == "Select section" {
-            let alert = UIAlertController(title: "Select section", message: nil, preferredStyle: .alert)
-            let alertOk = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(alertOk)
-            present(alert, animated: true, completion: nil)
-        }
         
         if label.text == "Do First" {
             guard nameTaskTF.text != nil && nameTaskTF.text != "" else {return}

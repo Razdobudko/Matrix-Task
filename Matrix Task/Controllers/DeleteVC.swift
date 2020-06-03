@@ -15,6 +15,11 @@ class DeleteVC: UIViewController {
     
     var tasks: Results<TaskDelete>!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tasks = realm.objects(TaskDelete.self)

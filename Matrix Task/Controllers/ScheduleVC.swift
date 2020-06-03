@@ -15,6 +15,11 @@ class ScheduleVC: UIViewController {
     
     var tasks: Results<TaskSchedule>!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tasks = realm.objects(TaskSchedule.self)

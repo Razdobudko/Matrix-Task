@@ -15,6 +15,11 @@ class DelegateVC: UIViewController {
     
     var tasks: Results<TaskDelegate>!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tasks = realm.objects(TaskDelegate.self)
